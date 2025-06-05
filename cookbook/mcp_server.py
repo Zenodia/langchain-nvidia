@@ -7,7 +7,7 @@ load_dotenv()
 tavily_client = TavilyClient()
 tavily_async_client = AsyncTavilyClient()
 
-mcp = FastMCP("SweBenchTools")
+mcp = FastMCP("MCPTools")
 @mcp.tool()
 def tavily_single_search(query):
     """ Search the web using the Tavily API.
