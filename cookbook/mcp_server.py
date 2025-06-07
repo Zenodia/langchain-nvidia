@@ -28,7 +28,7 @@ def tavily_single_search(query):
                          include_raw_content=True)
 
 @mcp.tool()
-async def tavily_concurrent_search_async(search_queries:list=None , tavily_topic :str=None, tavily_days:int=None):
+async def tavily_concurrent_search_async(search_queries:list=None , tavily_topic :str=None, tavily_days:int=None)-> list[dict]: 
     """
     Performs concurrent web searches using the Tavily API for multiple search queries in one go.
 
@@ -69,7 +69,7 @@ async def tavily_concurrent_search_async(search_queries:list=None , tavily_topic
 
     # Execute all searches concurrently
     search_docs = await asyncio.gather(*search_tasks)
-    print(Fore.MAGENTA + f" **async & parallel ** Tavily API Call resulting documents {search_docs} ", Fore.RESET)
+    #print(Fore.MAGENTA + f" **async & parallel ** Tavily API Call resulting documents {search_docs} ", Fore.RESET)
     return search_docs
 
 mcp.run(transport="streamable-http",

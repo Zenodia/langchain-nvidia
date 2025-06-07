@@ -14,9 +14,9 @@ async def main():
 
         #result = await client.call_tool("tavily_single_search", {"query": "Who is Leo Messi?"})
         #print(f"bash result: {result}")
-        result = await client.call_tool("tavily_concurrent_search_async", {"search_queries": ["Who is Leonardo Da Vinci?","what is the difference between CPU and GPU?"], "tavily_topic":"general","tavily_days":1})
-        print(type(result))
-        print(f" ---- \n result: \n\n {result} ----")
+        #result = await client.call_tool("tavily_concurrent_search_async", {"search_queries": ["Who is Leonardo Da Vinci?","what is the difference between CPU and GPU?"], "tavily_topic":"general","tavily_days":1})
+        #print(type(result))
+        #print(f" ---- \n result: \n\n {result} ----")
         
 
 
